@@ -1,0 +1,39 @@
+<html>
+	<head>
+		<title>NCIS</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+	</head>
+	<body>
+		<style type="text/css">
+			body {
+				background-size: cover;
+				background-repeat: no-repeat;
+			}
+		</style>
+
+		<script type="text/javascript">
+			var imgStack = [
+				"img-1.jpg",
+				"img-2.jpg",
+				"img-3.jpg",
+				"img-4.gif",
+				"img-5.gif",
+				"img-6.jpg",
+				"img-7.jpg",
+				"img-8.png",
+				"img-9.jpg",
+				"img-10.jpg",
+				"img-11.jpg",
+				"img-12.jpg"
+			];
+
+			var img = imgStack[Math.floor(Math.random()*imgStack.length)];
+
+			$("body").css("background-image","url(img/"+img);
+
+			$(document).on("keypress", function(){
+				window.close();
+			});
+		</script>
+	</body>
+</html>
