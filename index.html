@@ -1,0 +1,46 @@
+<html>
+	<head>
+		<title>NCIS.JS</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+	</head>
+	<body>
+		<style type="text/css">
+			body {
+				background-color: black;
+				color: green;
+				font-family: monospace;
+				padding: 30%;
+			}
+		</style>
+		<h1>Can you hack fast enough!??! Click to find out!</h1>
+
+		<script type="text/javascript">
+			var number = 50;
+			var delay = 500;
+
+			function getRandom(min, max) {
+				  return Math.random() * (max - min) + min;
+			}
+
+			function ncis(){
+				for(i=0; i<number; i++){
+					var winWidth = getRandom(300, 900);
+					var winHeight = getRandom(300, 700);
+
+					newWindow = window.open("ncis-window.html", "_blank",'PopUp','scrollbars=0,menubar=0');
+					newWindow.resizeTo(winWidth, winHeight);
+					newWindow.moveTo(getRandom(0, 1000),getRandom(0,500));
+
+					console.log('fired');
+				}
+			}
+
+			$("body").on("click", function(){
+				ncis();
+			});
+
+
+		</script>
+	</body>
+</html>
+
